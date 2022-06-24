@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
-import jayasurya from '../../assets/Jayasurya_01.jpg';
+import Jayasurya from '../../assets/Jayasurya_01.jpg';
 import Pepe from '../../assets/Antony_vertical_thumb_.jpg';
 import MRavi from '../../assets/Major_Ravi_02.jpg';
 import Niranjana from '../../assets/Niranjana_01.jpg';
 import Bibin from '../../assets/Bibin-01-min.jpg';
 import Sandra from '../../assets/Sandra-01-min.jpg';
 import Vishnu from '../../assets/Vishnu-unnikrishnan-01-min.jpg';
-import MAniyanpilla from '../../assets/Maniyanpilla-Raju-01-min.jpg';
+import Maniyanpilla from '../../assets/Maniyanpilla-Raju-01-min.jpg';
 import Gowri from '../../assets/Gowri-Nandha-01-min.jpg';
 import Hareesh from '../../assets/Hareesh-01-min.jpg';
 import play from '../../assets/play.svg';
@@ -15,12 +15,90 @@ import play from '../../assets/play.svg';
 
 export default function Actors() {
 
-    // const [watchStory,setWatch] = useState(Array(10).fill(false))
-    // let handlWatch = (index) => {
-    //     watchStory[index] = !watchStory[index];
-    //     setWatch(watchStory)
-    //     console.log(watchStory)
-    // }
+    const actors = [
+        {
+            id:1,
+            image: Jayasurya,
+            name: "Jayasurya",
+            desigantion: "Actor",
+        },
+        {
+            id:2,
+            image: Pepe,
+            name: "Antony Varghese",
+            desigantion: "Actor",
+        },
+        {
+            id:3,
+            image: MRavi,
+            name: "Major Ravi",
+            desigantion: "Director & Actor",
+        },
+        {
+            id:4,
+            image: Niranjana,
+            name: "Niranjana Anoop",
+            desigantion: "Actress",
+        },
+        {
+            id:5,
+            image: Bibin,
+            name: "Bibin George",
+            desigantion: "Script writer & Actor",
+        },
+        {
+            id:6,
+            image: Sandra,
+            name: "Sandra Thomas",
+            desigantion: "Producer & Actress",
+        },
+        {
+            id:7,
+            image: Vishnu,
+            name: "Vishnu Unnikrishnan",
+            desigantion: "Actor & Screen writer",
+        },
+        {
+            id:8,
+            image: Maniyanpilla,
+            name: "Maniyanpilla Raju",
+            desigantion: "Actor",
+        },
+        {
+            id:9,
+            image: Gowri,
+            name: "Gowri Nandha",
+            desigantion: "Actress",
+        },
+        {
+            id:9,
+            image: Hareesh,
+            name: "Hareesh Kanaran",
+            desigantion: "Actor",
+        },
+    ]
+
+    const renderActors = () => {
+        return (
+            actors.map((actor) => (
+                <Actorsli key={actor.id}>
+                    <Actorsgradient />
+                    <Actordiv>
+                        <Actorsimage src={actor.image} alt=""/>
+                    </Actordiv>
+                    <Actordetails>
+                        <Actornmame>{actor.name}</Actornmame>
+                        <Actordesignation>{actor.desigantion}</Actordesignation>
+                        <Watchstory to="/" >
+                            <Watchstorytext >
+                                <Play><Playimage src={play} alt="" /></Play>WATCH STORY
+                            </Watchstorytext>
+                        </Watchstory>
+                    </Actordetails>
+                </Actorsli>
+            ))
+        )
+    }
 
   return (
     <Wrapper>
@@ -28,165 +106,7 @@ export default function Actors() {
             <Green>TEFUN-ന്</Green>
             <Secondheading>ആശംസകളോടെ</Secondheading>
             <Actorsul>
-                <Actorsli>
-                    <Actorsgradient />
-                    <Actordiv>
-                        <Actorsimage src={jayasurya} alt=""/>
-                    </Actordiv>
-                    <Actordetails>
-                        <Actornmame>Jayasurya</Actornmame>
-                        <Actordesignation>Actor</Actordesignation>
-                        <Watchstory to="/" >
-                            <Watchstorytext >
-                                <Play><Playimage src={play} alt="" /></Play>WATCH STORY
-                            </Watchstorytext>
-                        </Watchstory>
-                    </Actordetails>
-                </Actorsli>
-                
-                <Actorsli>
-                    <Actorsgradient />
-                    <Actordiv>
-                        <Actorsimage src={Pepe} alt=""/>
-                    </Actordiv>
-                    <Actordetails>
-                        <Actornmame>Antony Varghese</Actornmame>
-                        <Actordesignation>Actor</Actordesignation>
-                        <Watchstory to="/" >
-                            <Watchstorytext >
-                                <Play><Playimage src={play} alt="" /></Play>WATCH STORY
-                            </Watchstorytext>
-                        </Watchstory>
-                    </Actordetails>
-                </Actorsli>
-
-                <Actorsli>
-                    <Actorsgradient />
-                    <Actordiv>
-                        <Actorsimage src={MRavi} alt=""/>
-                    </Actordiv>
-                    <Actordetails>
-                        <Actornmame>Major Ravi</Actornmame>
-                        <Actordesignation>Director & Actor</Actordesignation>
-                        <Watchstory to="/" >
-                            <Watchstorytext >
-                                <Play><Playimage src={play} alt="" /></Play>WATCH STORY
-                            </Watchstorytext>
-                        </Watchstory>
-                    </Actordetails>
-                </Actorsli>
-
-                <Actorsli>
-                    <Actorsgradient />
-                    <Actordiv>
-                        <Actorsimage src={Niranjana} alt=""/>
-                    </Actordiv>
-                    <Actordetails>
-                        <Actornmame>Niranjana Anoop</Actornmame>
-                        <Actordesignation>Actress</Actordesignation>
-                        <Watchstory to="/" >
-                            <Watchstorytext >
-                                <Play><Playimage src={play} alt="" /></Play>WATCH STORY
-                            </Watchstorytext>
-                        </Watchstory>
-                    </Actordetails>
-                </Actorsli>
-
-                <Actorsli>
-                    <Actorsgradient />
-                    <Actordiv>
-                        <Actorsimage src={Bibin} alt=""/>
-                    </Actordiv>
-                    <Actordetails>
-                        <Actornmame>Bibin George</Actornmame>
-                        <Actordesignation>Script writer & Actor</Actordesignation>
-                        <Watchstory to="/" >
-                            <Watchstorytext >
-                                <Play><Playimage src={play} alt="" /></Play>WATCH STORY
-                            </Watchstorytext>
-                        </Watchstory>
-                    </Actordetails>
-                </Actorsli>
-
-                <Actorsli>
-                    <Actorsgradient />
-                    <Actordiv>
-                        <Actorsimage src={Sandra} alt=""/>
-                    </Actordiv>
-                    <Actordetails>
-                        <Actornmame>Sandra Thomas</Actornmame>
-                        <Actordesignation>Producer & Actress</Actordesignation>
-                        <Watchstory to="/" >
-                            <Watchstorytext >
-                                <Play><Playimage src={play} alt="" /></Play>WATCH STORY
-                            </Watchstorytext>
-                        </Watchstory>
-                    </Actordetails>
-                </Actorsli>
-
-                <Actorsli>
-                    <Actorsgradient />
-                    <Actordiv>
-                        <Actorsimage src={Vishnu} alt=""/>
-                    </Actordiv>
-                    <Actordetails>
-                        <Actornmame>Vishnu Unnikrishnan</Actornmame>
-                        <Actordesignation>Actor & Screen writer</Actordesignation>
-                        <Watchstory to="/" >
-                            <Watchstorytext >
-                                <Play><Playimage src={play} alt="" /></Play>WATCH STORY
-                            </Watchstorytext>
-                        </Watchstory>
-                    </Actordetails>
-                </Actorsli>
-
-                <Actorsli>
-                    <Actorsgradient />
-                    <Actordiv>
-                        <Actorsimage src={MAniyanpilla} alt=""/>
-                    </Actordiv>
-                    <Actordetails>
-                        <Actornmame>Maniyanpilla Raju</Actornmame>
-                        <Actordesignation>Actor</Actordesignation>
-                        <Watchstory to="/" >
-                            <Watchstorytext >
-                                <Play><Playimage src={play} alt="" /></Play>WATCH STORY
-                            </Watchstorytext>
-                        </Watchstory>
-                    </Actordetails>
-                </Actorsli>
-
-                <Actorsli>
-                    <Actorsgradient />
-                    <Actordiv>
-                        <Actorsimage src={Gowri} alt=""/>
-                    </Actordiv>
-                    <Actordetails>
-                        <Actornmame>Gowri Nandha</Actornmame>
-                        <Actordesignation>Actress</Actordesignation>
-                        <Watchstory to="/" >
-                            <Watchstorytext >
-                                <Play><Playimage src={play} alt="" /></Play>WATCH STORY
-                            </Watchstorytext>
-                        </Watchstory>
-                    </Actordetails>
-                </Actorsli>
-
-                <Actorsli>
-                    <Actorsgradient />
-                    <Actordiv>
-                        <Actorsimage src={Hareesh} alt=""/>
-                    </Actordiv>
-                    <Actordetails>
-                        <Actornmame>Hareesh Kanaran</Actornmame>
-                        <Actordesignation>Actor</Actordesignation>
-                        <Watchstory to="/" >
-                            <Watchstorytext >
-                                <Play><Playimage src={play} alt="" /></Play>WATCH STORY
-                            </Watchstorytext>
-                        </Watchstory>
-                    </Actordetails>
-                </Actorsli>
+                { renderActors() }
             </Actorsul>
         </Actorswrpped>
     </Wrapper>

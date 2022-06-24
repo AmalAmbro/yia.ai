@@ -164,13 +164,22 @@ const Arrow = styled.div`
   width:25%;
   position: absolute;
   left:-100px;
-  bottom:190px;
+  bottom:-80px;
+  @media screen and (max-width:1440px){
+    left: -80px;
+    bottom: 130px
+  }
+  @media screen and (max-width:1200px){
+    left: -80px;
+    bottom:280px;
+  }
   @media screen and (max-width:960px){
+    bottom:150px;
     left: -50px;
   }
   @media screen and (max-width:720px){
-    left: -20px;
-    bottom:320px;
+    left: -50px;
+    bottom:300px;
   }
 `
 
